@@ -1,0 +1,204 @@
+2025-06-03 13:54:27,710 - INFO - app.modules.rag_manager - rag_manager.py:33 - Initializing RAGManager components...
+2025-06-03 13:54:27,711 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 13:54:55,555 - INFO - app.modules.rag_manager - rag_manager.py:38 - Embedding model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 13:54:55,557 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 13:54:55,557 - INFO - app.modules.rag_manager - rag_manager.py:44 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 13:54:55,558 - INFO - app.modules.rag_manager - rag_manager.py:45 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 13:54:55,558 - ERROR - app.modules.rag_manager - rag_manager.py:63 - Error during RAGManager component initialization: ServiceContext is deprecated. Use llama_index.settings.Settings instead, or pass in modules to local functions/methods/interfaces.
+See the docs for updated usage/migration: 
+https://docs.llamaindex.ai/en/stable/module_guides/supporting_modules/service_context_migration/
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 52, in _initialize_components
+    self._service_context = ServiceContext.from_defaults(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/service_context.py", line 33, in from_defaults
+    raise ValueError(
+ValueError: ServiceContext is deprecated. Use llama_index.settings.Settings instead, or pass in modules to local functions/methods/interfaces.
+See the docs for updated usage/migration: 
+https://docs.llamaindex.ai/en/stable/module_guides/supporting_modules/service_context_migration/
+2025-06-03 14:02:31,564 - INFO - app.modules.rag_manager - rag_manager.py:35 - Initializing RAGManager components using new LlamaIndex Settings API...
+2025-06-03 14:02:31,566 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 14:02:45,763 - INFO - app.modules.rag_manager - rag_manager.py:41 - LlamaIndex global embed_model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 14:02:45,766 - INFO - app.frameworks.llama_index.splitter - splitter.py:12 - Initializing LlamaIndex SentenceSplitter with chunk_size=512, chunk_overlap=50
+2025-06-03 14:02:46,005 - INFO - app.modules.rag_manager - rag_manager.py:61 - LlamaIndex global node_parser initialized with default chunk settings: <class 'llama_index.core.node_parser.text.sentence.SentenceSplitter'>
+2025-06-03 14:02:46,005 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 14:02:46,006 - INFO - app.modules.rag_manager - rag_manager.py:68 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:02:46,007 - INFO - app.modules.rag_manager - rag_manager.py:69 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:02:46,007 - INFO - app.modules.rag_manager - rag_manager.py:79 - Attempting to load index 'my-rag-index' from vector store 'simple'
+2025-06-03 14:02:46,007 - WARNING - app.modules.rag_manager - rag_manager.py:102 - Could not load index directly from vector store (maybe it's empty or first time): Cannot initialize from a vector store that does not store text.. Attempting to create new index object.
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 87, in _load_or_create_index
+    self._index = VectorStoreIndex.from_vector_store(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/indices/vector_store/base.py", line 96, in from_vector_store
+    raise ValueError(
+ValueError: Cannot initialize from a vector store that does not store text.
+2025-06-03 14:02:46,012 - INFO - app.modules.rag_manager - rag_manager.py:110 - Created a new, empty index object for 'my-rag-index'.
+2025-06-03 14:02:46,013 - INFO - app.modules.rag_manager - rag_manager.py:119 - Index 'my-rag-index' is ready.
+2025-06-03 14:02:46,745 - INFO - __main__ - main.py:171 - Starting Agentic Mirai RAG API on 0.0.0.0:8000
+2025-06-03 14:09:24,126 - INFO - app.modules.rag_manager - rag_manager.py:35 - Initializing RAGManager components using new LlamaIndex Settings API...
+2025-06-03 14:09:24,127 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 14:09:35,206 - INFO - app.modules.rag_manager - rag_manager.py:41 - LlamaIndex global embed_model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 14:09:35,208 - INFO - app.frameworks.llama_index.splitter - splitter.py:12 - Initializing LlamaIndex SentenceSplitter with chunk_size=512, chunk_overlap=50
+2025-06-03 14:09:35,472 - INFO - app.modules.rag_manager - rag_manager.py:61 - LlamaIndex global node_parser initialized with default chunk settings: <class 'llama_index.core.node_parser.text.sentence.SentenceSplitter'>
+2025-06-03 14:09:35,472 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 14:09:35,476 - INFO - app.modules.rag_manager - rag_manager.py:68 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:09:35,479 - INFO - app.modules.rag_manager - rag_manager.py:69 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:09:35,480 - INFO - app.modules.rag_manager - rag_manager.py:79 - Attempting to load index 'my-rag-index' from vector store 'simple'
+2025-06-03 14:09:35,480 - WARNING - app.modules.rag_manager - rag_manager.py:102 - Could not load index directly from vector store (maybe it's empty or first time): Cannot initialize from a vector store that does not store text.. Attempting to create new index object.
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 87, in _load_or_create_index
+    self._index = VectorStoreIndex.from_vector_store(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/indices/vector_store/base.py", line 96, in from_vector_store
+    raise ValueError(
+ValueError: Cannot initialize from a vector store that does not store text.
+2025-06-03 14:09:35,497 - INFO - app.modules.rag_manager - rag_manager.py:110 - Created a new, empty index object for 'my-rag-index'.
+2025-06-03 14:09:35,498 - INFO - app.modules.rag_manager - rag_manager.py:119 - Index 'my-rag-index' is ready.
+2025-06-03 14:09:35,571 - INFO - __main__ - main.py:171 - Starting Agentic Mirai RAG API on 0.0.0.0:8000
+2025-06-03 14:22:33,536 - INFO - app.modules.rag_manager - rag_manager.py:35 - Initializing RAGManager components using new LlamaIndex Settings API...
+2025-06-03 14:22:33,538 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 14:22:43,013 - INFO - app.modules.rag_manager - rag_manager.py:41 - LlamaIndex global embed_model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 14:22:43,015 - INFO - app.frameworks.llama_index.splitter - splitter.py:12 - Initializing LlamaIndex SentenceSplitter with chunk_size=512, chunk_overlap=50
+2025-06-03 14:22:43,378 - INFO - app.modules.rag_manager - rag_manager.py:61 - LlamaIndex global node_parser initialized with default chunk settings: <class 'llama_index.core.node_parser.text.sentence.SentenceSplitter'>
+2025-06-03 14:22:43,378 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 14:22:43,381 - INFO - app.modules.rag_manager - rag_manager.py:68 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:22:43,381 - INFO - app.modules.rag_manager - rag_manager.py:69 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:22:43,381 - INFO - app.modules.rag_manager - rag_manager.py:79 - Attempting to load index 'my-rag-index' from vector store 'simple'
+2025-06-03 14:22:43,383 - WARNING - app.modules.rag_manager - rag_manager.py:102 - Could not load index directly from vector store (maybe it's empty or first time): Cannot initialize from a vector store that does not store text.. Attempting to create new index object.
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 87, in _load_or_create_index
+    self._index = VectorStoreIndex.from_vector_store(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/indices/vector_store/base.py", line 96, in from_vector_store
+    raise ValueError(
+ValueError: Cannot initialize from a vector store that does not store text.
+2025-06-03 14:22:43,391 - INFO - app.modules.rag_manager - rag_manager.py:110 - Created a new, empty index object for 'my-rag-index'.
+2025-06-03 14:22:43,391 - INFO - app.modules.rag_manager - rag_manager.py:119 - Index 'my-rag-index' is ready.
+2025-06-03 14:22:43,467 - INFO - __main__ - main.py:171 - Starting Agentic Mirai RAG API on 0.0.0.0:8000
+2025-06-03 14:22:47,304 - INFO - __main__ - main.py:89 - File 'sample.txt' uploaded to 'temp_uploads/sample.txt'.
+2025-06-03 14:22:47,304 - INFO - __main__ - main.py:90 - Chunking params: size=None, overlap=None
+2025-06-03 14:22:47,304 - INFO - app.modules.rag_manager - rag_manager.py:124 - Processing document: temp_uploads/sample.txt
+2025-06-03 14:22:47,305 - INFO - app.frameworks.llama_index.loader - loader.py:17 - Loading document from source: temp_uploads/sample.txt with LlamaIndex
+2025-06-03 14:22:47,305 - ERROR - app.frameworks.llama_index.loader - loader.py:45 - Error loading document with LlamaIndex: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/frameworks/llama_index/loader.py", line 28, in load
+    return SimpleDirectoryReader(input_files=[source], file_metadata=lambda _: metadata or {}).load_docs()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+2025-06-03 14:22:47,307 - ERROR - app.modules.rag_manager - rag_manager.py:181 - Error adding document temp_uploads/sample.txt: LlamaIndex loader failed: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/frameworks/llama_index/loader.py", line 28, in load
+    return SimpleDirectoryReader(input_files=[source], file_metadata=lambda _: metadata or {}).load_docs()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 138, in add_document
+    loaded_docs = loader.load(source=file_path, metadata=doc_metadata)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/frameworks/llama_index/loader.py", line 46, in load
+    raise DocumentProcessingError(f"LlamaIndex loader failed: {str(e)}")
+shared.exceptions.DocumentProcessingError: LlamaIndex loader failed: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+2025-06-03 14:22:47,308 - ERROR - __main__ - main.py:108 - Error during document upload processing: Failed to process and index document temp_uploads/sample.txt: LlamaIndex loader failed: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/frameworks/llama_index/loader.py", line 28, in load
+    return SimpleDirectoryReader(input_files=[source], file_metadata=lambda _: metadata or {}).load_docs()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 138, in add_document
+    loaded_docs = loader.load(source=file_path, metadata=doc_metadata)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/frameworks/llama_index/loader.py", line 46, in load
+    raise DocumentProcessingError(f"LlamaIndex loader failed: {str(e)}")
+shared.exceptions.DocumentProcessingError: LlamaIndex loader failed: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/main.py", line 95, in upload_document
+    nodes_indexed = rag_manager.add_document(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 182, in add_document
+    raise IndexingError(f"Failed to process and index document {file_path}: {e}")
+shared.exceptions.IndexingError: Failed to process and index document temp_uploads/sample.txt: LlamaIndex loader failed: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+2025-06-03 14:22:47,310 - WARNING - __main__ - main.py:59 - HTTP Exception: Status 500, Detail: Failed to process document: Failed to process and index document temp_uploads/sample.txt: LlamaIndex loader failed: 'SimpleDirectoryReader' object has no attribute 'load_docs'
+2025-06-03 14:28:45,325 - INFO - app.modules.rag_manager - rag_manager.py:35 - Initializing RAGManager components using new LlamaIndex Settings API...
+2025-06-03 14:28:45,325 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 14:28:55,858 - INFO - app.modules.rag_manager - rag_manager.py:41 - LlamaIndex global embed_model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 14:28:55,858 - INFO - app.frameworks.llama_index.splitter - splitter.py:12 - Initializing LlamaIndex SentenceSplitter with chunk_size=512, chunk_overlap=50
+2025-06-03 14:28:56,200 - INFO - app.modules.rag_manager - rag_manager.py:61 - LlamaIndex global node_parser initialized with default chunk settings: <class 'llama_index.core.node_parser.text.sentence.SentenceSplitter'>
+2025-06-03 14:28:56,201 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 14:28:56,202 - INFO - app.modules.rag_manager - rag_manager.py:68 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:28:56,202 - INFO - app.modules.rag_manager - rag_manager.py:69 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:28:56,202 - INFO - app.modules.rag_manager - rag_manager.py:79 - Attempting to load index 'my-rag-index' from vector store 'simple'
+2025-06-03 14:28:56,203 - WARNING - app.modules.rag_manager - rag_manager.py:102 - Could not load index directly from vector store (maybe it's empty or first time): Cannot initialize from a vector store that does not store text.. Attempting to create new index object.
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 87, in _load_or_create_index
+    self._index = VectorStoreIndex.from_vector_store(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/indices/vector_store/base.py", line 96, in from_vector_store
+    raise ValueError(
+ValueError: Cannot initialize from a vector store that does not store text.
+2025-06-03 14:28:56,207 - INFO - app.modules.rag_manager - rag_manager.py:110 - Created a new, empty index object for 'my-rag-index'.
+2025-06-03 14:28:56,207 - INFO - app.modules.rag_manager - rag_manager.py:119 - Index 'my-rag-index' is ready.
+2025-06-03 14:28:56,276 - INFO - __main__ - main.py:171 - Starting Agentic Mirai RAG API on 0.0.0.0:8000
+2025-06-03 14:29:16,000 - INFO - app.modules.rag_manager - rag_manager.py:35 - Initializing RAGManager components using new LlamaIndex Settings API...
+2025-06-03 14:29:16,001 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 14:29:24,886 - INFO - app.modules.rag_manager - rag_manager.py:41 - LlamaIndex global embed_model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 14:29:24,886 - INFO - app.frameworks.llama_index.splitter - splitter.py:12 - Initializing LlamaIndex SentenceSplitter with chunk_size=512, chunk_overlap=50
+2025-06-03 14:29:25,116 - INFO - app.modules.rag_manager - rag_manager.py:61 - LlamaIndex global node_parser initialized with default chunk settings: <class 'llama_index.core.node_parser.text.sentence.SentenceSplitter'>
+2025-06-03 14:29:25,116 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 14:29:25,117 - INFO - app.modules.rag_manager - rag_manager.py:68 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:29:25,117 - INFO - app.modules.rag_manager - rag_manager.py:69 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:29:25,117 - INFO - app.modules.rag_manager - rag_manager.py:79 - Attempting to load index 'my-rag-index' from vector store 'simple'
+2025-06-03 14:29:25,117 - WARNING - app.modules.rag_manager - rag_manager.py:102 - Could not load index directly from vector store (maybe it's empty or first time): Cannot initialize from a vector store that does not store text.. Attempting to create new index object.
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 87, in _load_or_create_index
+    self._index = VectorStoreIndex.from_vector_store(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/indices/vector_store/base.py", line 96, in from_vector_store
+    raise ValueError(
+ValueError: Cannot initialize from a vector store that does not store text.
+2025-06-03 14:29:25,120 - INFO - app.modules.rag_manager - rag_manager.py:110 - Created a new, empty index object for 'my-rag-index'.
+2025-06-03 14:29:25,120 - INFO - app.modules.rag_manager - rag_manager.py:119 - Index 'my-rag-index' is ready.
+2025-06-03 14:29:25,324 - INFO - app.modules.rag_manager - rag_manager.py:35 - Initializing RAGManager components using new LlamaIndex Settings API...
+2025-06-03 14:29:25,324 - INFO - app.frameworks.llama_index.embedder - embedder.py:18 - Initializing LlamaIndex embedding model: huggingface
+2025-06-03 14:29:29,876 - INFO - app.modules.rag_manager - rag_manager.py:41 - LlamaIndex global embed_model initialized: <class 'llama_index.embeddings.huggingface.base.HuggingFaceEmbedding'>
+2025-06-03 14:29:29,877 - INFO - app.frameworks.llama_index.splitter - splitter.py:12 - Initializing LlamaIndex SentenceSplitter with chunk_size=512, chunk_overlap=50
+2025-06-03 14:29:29,877 - INFO - app.modules.rag_manager - rag_manager.py:61 - LlamaIndex global node_parser initialized with default chunk settings: <class 'llama_index.core.node_parser.text.sentence.SentenceSplitter'>
+2025-06-03 14:29:29,877 - INFO - app.frameworks.llama_index.vectorstore - vectorstore.py:26 - Initializing LlamaIndex vector store: simple
+2025-06-03 14:29:29,877 - INFO - app.modules.rag_manager - rag_manager.py:68 - Vector store initialized: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:29:29,877 - INFO - app.modules.rag_manager - rag_manager.py:69 - Storage context configured with: <class 'llama_index.core.vector_stores.simple.SimpleVectorStore'>
+2025-06-03 14:29:29,877 - INFO - app.modules.rag_manager - rag_manager.py:79 - Attempting to load index 'my-rag-index' from vector store 'simple'
+2025-06-03 14:29:29,878 - WARNING - app.modules.rag_manager - rag_manager.py:102 - Could not load index directly from vector store (maybe it's empty or first time): Cannot initialize from a vector store that does not store text.. Attempting to create new index object.
+Traceback (most recent call last):
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic_mirai/app/modules/rag_manager.py", line 87, in _load_or_create_index
+    self._index = VectorStoreIndex.from_vector_store(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashish/Documents/Work/Main/BitBucket/agentic-ai-platform-backend/venv/lib/python3.11/site-packages/llama_index/core/indices/vector_store/base.py", line 96, in from_vector_store
+    raise ValueError(
+ValueError: Cannot initialize from a vector store that does not store text.
+2025-06-03 14:29:29,879 - INFO - app.modules.rag_manager - rag_manager.py:110 - Created a new, empty index object for 'my-rag-index'.
+2025-06-03 14:29:29,879 - INFO - app.modules.rag_manager - rag_manager.py:119 - Index 'my-rag-index' is ready.
+2025-06-03 14:29:33,914 - INFO - main - main.py:89 - File 'sample.txt' uploaded to 'temp_uploads/sample.txt'.
+2025-06-03 14:29:33,914 - INFO - main - main.py:90 - Chunking params: size=None, overlap=None
+2025-06-03 14:29:33,914 - INFO - app.modules.rag_manager - rag_manager.py:124 - Processing document: temp_uploads/sample.txt
+2025-06-03 14:29:33,914 - INFO - app.frameworks.llama_index.loader - loader.py:17 - Loading document from source: temp_uploads/sample.txt with LlamaIndex
+2025-06-03 14:29:34,015 - INFO - app.modules.rag_manager - rag_manager.py:142 - Loaded 1 document parts from temp_uploads/sample.txt.
+2025-06-03 14:29:34,015 - INFO - app.modules.rag_manager - rag_manager.py:155 - Using global LlamaSettings.node_parser for this ingestion.
+2025-06-03 14:29:34,039 - INFO - app.modules.rag_manager - rag_manager.py:159 - Generated 1 nodes from document.
+2025-06-03 14:29:34,771 - INFO - app.modules.rag_manager - rag_manager.py:169 - Successfully indexed 1 nodes from temp_uploads/sample.txt into 'my-rag-index'.
+2025-06-03 14:29:34,779 - INFO - app.modules.rag_manager - rag_manager.py:177 - Persisted SimpleVectorStore to ./storage.
+2025-06-03 14:31:16,918 - INFO - app.modules.rag_manager - rag_manager.py:186 - Received query: 'What is LlamaIndex?' with params: {"query_text":"What is LlamaIndex?","top_k":2,"retrieval_strategy":"similarity"}
+2025-06-03 14:31:16,921 - INFO - app.frameworks.llama_index.retrievers - retrievers.py:30 - Initializing LlamaIndex retriever with strategy: similarity, top_k: 2
+2025-06-03 14:31:16,969 - INFO - app.modules.rag_manager - rag_manager.py:222 - Query 'What is LlamaIndex?' retrieved 1 nodes.
+2025-06-03 14:48:58,796 - INFO - app.modules.rag_manager - rag_manager.py:186 - Received query: 'What is LlamaIndex?' with params: {"query_text":"What is LlamaIndex?","top_k":2,"retrieval_strategy":"mmr"}
+2025-06-03 14:48:58,799 - INFO - app.frameworks.llama_index.retrievers - retrievers.py:30 - Initializing LlamaIndex retriever with strategy: mmr, top_k: 2
+2025-06-03 14:48:58,897 - INFO - app.modules.rag_manager - rag_manager.py:222 - Query 'What is LlamaIndex?' retrieved 1 nodes.

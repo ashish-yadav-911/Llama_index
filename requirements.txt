@@ -1,0 +1,29 @@
+# AGENTIC_MIRAI/requirements.txt
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+llama-index
+llama-index-llms-openai  # Or your preferred LLM for synthesis (optional for now)
+llama-index-embeddings-huggingface
+llama-index-embeddings-openai
+llama-index-vector-stores-pinecone
+llama-index-vector-stores-postgres  # For pgvector
+llama-index-readers-file # For PDFReader, etc.
+# llama-index-readers-web # If you need web readers
+
+# For PGVector (if you use it)
+psycopg2-binary
+asyncpg
+
+# For Pinecone
+pinecone-client
+
+# For testing
+pytest
+pytest-asyncio
+httpx # For testing FastAPI endpoints
+
+# For logging
+python-json-logger # Optional, for structured JSON logging
