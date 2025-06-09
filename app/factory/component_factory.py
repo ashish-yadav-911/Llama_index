@@ -17,6 +17,13 @@ from app.frameworks.llama_index.embedder import LlamaIndexEmbeddingModel
 from app.frameworks.llama_index.vectorstore import LlamaIndexVectorStore
 from app.frameworks.llama_index.retrievers import LlamaIndexVectorRetriever
 
+#llm-synthesizer imports
+from app.abstract.synthesizer import BaseResponseSynthesizer
+from app.frameworks.llama_index.llms import get_llama_index_llm # New import
+from app.frameworks.llama_index.synthesizers import LlamaIndexResponseSynthesizer # New import
+from llama_index.core.llms import LLM # For type hint
+# Logging setup
+
 logger = get_logger(__name__)
 
 class ComponentFactory:
@@ -59,3 +66,17 @@ class ComponentFactory:
         if self.framework == "llama_index":
             return LlamaIndexVectorRetriever(settings=self.settings)
         raise ConfigurationError(f"Unsupported framework for vector retriever: {self.framework}")
+    
+    def get_llm(self) -> LLM: # New method
+        logger.debug(f"Creating LLM for framework: {self.framework}")
+        if self.framework == "llama_index":
+            return get_llama_index_llm(settings=self.settings)
+        # Add other frameworks later
+        raise ConfigurationError(f"Unsupported framework for LLM: {self.framework}")
+
+    def get_response_synthesizer(self) -> BaseResponseSynthesizer:
+        logger.debug(f"Creating response synthesizer for framework: {self.framework}")
+        if self.framework == "llama_index":
+            llm_instance = self.get_llm()
+            return LlamaIndexResponseSynthesizer(llm=llm_instance, settings=self.settings) # Call looks correct
+        raise ConfigurationError(f"Unsupported framework for response synthesizer: {self.framework}")

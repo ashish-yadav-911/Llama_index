@@ -23,7 +23,7 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     query_text: str
     retrieved_nodes: List[RetrievedNode]
-    # synthesized_answer: Optional[str] = None # If you add synthesis later
+    synthesized_answer: Optional[str] = None
 
 class UploadResponse(BaseModel):
     message: str
@@ -45,3 +45,4 @@ class UploadFileBody:
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         # self.metadata = json.loads(metadata_json) if metadata_json else {}
+

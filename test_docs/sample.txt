@@ -1,3 +1,96 @@
-The quick brown fox jumps over the lazy dog. This is a test document for the RAG system.
-LlamaIndex is a framework for building context-augmented LLM applications.
-Pydantic is used for data validation. FastAPI provides the web server.
+Structured Knowledge About Iffort
+
+1. Innovative AI Solutions:
+   Our intelligent AI solutions give forward-thinking companies a friendly boost, helping them work better and stand out. We distinguish between signal and noise in the realm of AI.
+
+2. Conversational AI Agents:
+   Unlock the potential of our Conversational AI agents, designed to automate both chat and voice interactions. Our human-like AI agents handle customer queries 24/7, boosting efficiency and driving conversions. Supports multi-language conversations, integrates with booking systems, and automates workflows.
+
+3. Voice AI Agent for F\&B Industry:
+   Multi-lingual voice AI agent for 24/7 restaurant bookings. Handles reservations in multiple languages for a smooth customer experience.
+
+4. AI Training & Workshops:
+   Specialized workshops to help leaders, managers, and executives navigate AI confidently. Focused on strategies, productivity, and innovation.
+   Feedback:
+
+   * "It is an eye-opener. I hope a lot more can attend this training. It will be beneficial to us personally and the company. Will help with our day-to-day duties."
+   * "Great informative course. Very well-informed course that would help staff a lot on increasing productivity. Please extend the course to all levels of staff."
+     Key Takeaways:
+   * Develop AI Strategies
+   * Cultivate an AI-first culture
+   * Lead AI-driven change
+   * Future-proof your organization
+
+5. Custom AI & ML Development:
+   Custom AI across industries to integrate into business workflows.
+   Examples:
+
+   * ChefGPT: Personalized AI recipe generator
+   * Digital Friend: Smart chatbot for parents of kids with Down Syndrome
+   * Mental Health Chatbot: Designed for kids with ADHD
+
+6. Mirai for Real Estate Industry:
+   AI assistant to qualify leads, assess eligibility, and recommend properties. Saves time and improves client engagement for more transactions.
+
+7. Why Work with Us:
+   Members of Forbes Agency Council, founding member of AI Marketers Guild, and recognized partners for platforms like Vapi and KOGO. Experts in seamless AI integration.
+
+8. Meet the Humans Behind AI:
+   Iffort.ai is a business unit of Iffort, a tech and digital marketing company with 14+ years of experience.
+   Team:
+
+   * Daksh Sharma: Managing Partner and Founder
+   * Sunny Jindal: Managing Partner and Founder
+   * Ashish Upadhyay: Technical Architect
+   * Prashant Upadhyay: AI/ML Engineer
+   * Ashish Yadav: AI/ML Engineer
+   * Sushmita: Board Advisor, Singapore
+   * Messias Maduro: Sales Partner, Brazil
+   * Tejas Sawant: AI Application Developer
+     Website: [https://www.iffort.ai](https://www.iffort.ai)
+
+---
+
+**Company Overview:**
+
+Company: Iffort
+Tagline: Accelerate Your Digital Journey with Your Digital Technology & Marketing Partners
+Pillars: BUILD, GROW, ENGAGE
+Founded: 2010
+Offices: Delhi, Dubai, Canada
+Projects Completed: 100
+Team Size: 40
+Brands Served: 200
+Digital Campaigns: 100
+Performance Media Budget: 10mn USD+
+
+---
+
+**Office Locations:**
+
+India
+
+* City: Noida
+* Location: C-56, A/13, 8th Floor, Sector 62, Noida, Uttar Pradesh 201307
+* Phone: +91 837 395 2258
+
+UAE
+
+* City: Sharjah
+* Location: Business Centre, Publishing City Free Zone, Sharjah UAE
+* Phone: +971 54 545 7770
+
+Canada
+
+* City: Oshawa
+* Location: 2316 Pilgrim Square Oshawa ON L1L 0C2
+* Phone: +1 (437) 987-7424
+
+---
+
+**Contact Email:**
+[business@iffort.com](mailto:business@iffort.com)
+
+---
+
+Let me know if you'd like this saved to a downloadable `.txt` file.

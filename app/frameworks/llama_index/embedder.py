@@ -17,12 +17,12 @@ class LlamaIndexEmbeddingModel(BaseEmbeddingModel):
         model_type = self.settings.EMBEDDING_MODEL_TYPE
         logger.info(f"Initializing LlamaIndex embedding model: {model_type}")
         if model_type == "huggingface":
-            return HuggingFaceEmbedding(model_name=self.settings.HF_EMBEDDING_MODEL_NAME)
+            return HuggingFaceEmbedding(model=self.settings.HF_EMBEDDING_MODEL_NAME)
         elif model_type == "openai":
             if not self.settings.OPENAI_API_KEY:
                 raise ConfigurationError("OPENAI_API_KEY is not set for OpenAI embeddings.")
             return OpenAIEmbedding(
-                model=self.settings.OPENAI_EMBEDDING_MODEL_NAME,
+                    model=self.settings.OPENAI_EMBEDDING_MODEL_NAME,
                 api_key=self.settings.OPENAI_API_KEY
             )
         else:
