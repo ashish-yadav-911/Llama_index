@@ -3,10 +3,15 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional, Literal
 from fastapi import UploadFile, File
 
+# class DocumentMetadata(BaseModel):
+#     source: Optional[str] = None # e.g., filename, URL
+#     page_number: Optional[int] = None
+#     extra_info: Optional[Dict[str, Any]] = None
+
 class DocumentMetadata(BaseModel):
-    source: Optional[str] = None # e.g., filename, URL
+    source: Optional[str] = None
     page_number: Optional[int] = None
-    extra_info: Optional[Dict[str, Any]] = None
+    extra_info: Optional[dict[str, Any]] = None
 
 class RetrievedNode(BaseModel):
     text: str
@@ -16,9 +21,10 @@ class RetrievedNode(BaseModel):
 class QueryRequest(BaseModel):
     query_text: str = Field(..., min_length=1, description="The user's query.")
     top_k: Optional[int] = Field(None, gt=0, description="Number of results to retrieve.")
-    retrieval_strategy: Optional[Literal["similarity", "mmr"]] = Field(None, description="Retrieval strategy.")
-    # Add other configurable parameters like filters, MMR specific params if needed
-    # mmr_diversity_bias: Optional[float] = Field(None, ge=0.0, le=1.0)
+    retrieval_strategy: Optional[Literal["similarity", "mmr", "hybrid"]] = Field(None, description="Retrieval strategy.")
+    mmr_threshold: Optional[float] = Field(None, ge=0.0, le=1.0, description="MMR threshold (0-1). Higher for more diversity. Used if strategy is 'mmr'.")
+    hybrid_dense_top_k: Optional[int] = Field(None, gt=0, description="Top K for dense part of hybrid search.")
+    hybrid_sparse_top_k: Optional[int] = Field(None, gt=0, description="Top K for sparse part of hybrid search.")
 
 class QueryResponse(BaseModel):
     query_text: str

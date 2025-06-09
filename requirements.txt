@@ -1,29 +1,81 @@
-# AGENTIC_MIRAI/requirements.txt
-fastapi
-uvicorn[standard]
-pydantic
-pydantic-settings
-python-dotenv
-llama-index
-llama-index-llms-openai  # Or your preferred LLM for synthesis (optional for now)
-llama-index-embeddings-huggingface
-llama-index-embeddings-openai
-llama-index-vector-stores-pinecone
-llama-index-vector-stores-postgres  # For pgvector
-llama-index-readers-file # For PDFReader, etc.
-# llama-index-readers-web # If you need web readers
+# # AGENTIC_MIRAI/requirements.txt
+# fastapi
+# uvicorn[standard]
+# pydantic
+# pydantic-settings
+# python-dotenv
+# llama-index
+# llama-index-llms-openai  # Or your preferred LLM for synthesis (optional for now)
+# llama-index-embeddings-huggingface
+# llama-index-embeddings-openai
+# llama-index-vector-stores-pinecone
+# llama-index-vector-stores-postgres  # For pgvector
+# llama-index-readers-file # For PDFReader, etc.
+# # llama-index-readers-web # If you need web readers
+
+# # For PGVector (if you use it)
+# psycopg2-binary
+# asyncpg
+
+# # For Pinecone
+# pinecone-client
+
+# # For testing
+# pytest
+# pytest-asyncio
+# httpx # For testing FastAPI endpoints
+# rank_bm25
+# # For logging
+# python-json-logger # Optional, for structured JSON logging
+
+
+
+
+
+
+
+
+
+
+
+
+
+# llama-index-llms-openai
+# llama-index-embeddings-huggingface
+# llama-index-embeddings-openai
+# llama-index-vector-stores-pinecone # This needs to be compatible
+# llama-index-vector-stores-postgres 
+# llama-index-readers-file
+
 
 # For PGVector (if you use it)
 psycopg2-binary
 asyncpg
 
-# For Pinecone
-pinecone-client
-
 # For testing
 pytest
 pytest-asyncio
-httpx # For testing FastAPI endpoints
+httpx 
 
-# For logging
-python-json-logger # Optional, for structured JSON logging
+
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+
+llama-index>=0.10.30,<0.11.0 # Use a known stable 0.10.x series for now
+
+
+pinecone>=4.1.0,<5.0.0 # Your current 4.1.2 is fine here
+
+psycopg2-binary
+asyncpg
+pytest
+pytest-asyncio
+httpx 
+python-json-logger 
+llama-index-retrievers-bm25
+python-multipart
+# Add NumPy constraint
+numpy<2.0 
